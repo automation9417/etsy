@@ -1,9 +1,10 @@
-### Use python to batch grab website images
-Use the python automation library 'clicknium' and 'requests' library to batch download website pictures. Clicknium is a very easy to use automation library that supports automatic operation of web sites and desktop software. The requests library can be used to send request to download pictures.
+### Use python to batch scrape website images
+Use the python automation library 'clicknium' and 'requests' library to batch download website pictures. Clicknium is a automation library that supports automatic operation of web sites and desktop software. The requests library can be used to send request to download pictures.
+We use the clicknium library to obtain the image url, and the requests library to download it.
 
 Clicknium can be used with vscode. It is very easy to get started. We try to use these two libraries to capture https://www.etsy.com website product images.
 
-### Installation steps
+### Installation Steps
 1. install vscode + python3.x
 2. install vscode extension :clicknium
    ![install_clicknium.png](.locator/etsy_img/install_clicknium.png)
@@ -14,7 +15,7 @@ Clicknium can be used with vscode. It is very easy to get started. We try to use
     pip install requests
    ```
 
-### Program steps
+### Program Steps
 1. Open target site :etsy
 2. Enter keywords in the search box and click the search button and wait for the page to load
 3. Set sort by conditions
@@ -22,10 +23,10 @@ Clicknium can be used with vscode. It is very easy to get started. We try to use
 5. Close browser
    
 ### Source code
-github链接
+[source code of etsy](https://github.com/automation9417/etsy)
 
-### How to run
-After the above environment is configured, download the source code from github, open the etsy folder with vscode, and press F5 to run sample.py . The location information used in the program is stored in ./locator/etsy In the cnstore file, the program needs to obtain the location information of the control from the file when running, so it needs to included in the project.
+### How to run on my computer
+Install and config by 'Installation Steps', download the source code from github, then open the etsy folder with vscode, and press F5 to run sample.py. The locate information used in the program is stored in ./locator/etsy.cnstore file, the program needs to get the locate information of the control from the file when running, so it needs to be included in the project.
 
 ``` python
 import os
@@ -46,7 +47,7 @@ def main():
     # wait 4 second to loading page content
     sleep(4)
 
-    # set sort by 
+    # set sort by condition
     tab.find_element(locator.etsy.btn_dropdown).click()
     tab.find_element(locator.etsy.dropdown_item_most_recent).click()
     sleep(4)
