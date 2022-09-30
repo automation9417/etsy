@@ -23,8 +23,13 @@ Clicknium can be used with vscode. It is very easy to get started. We try to use
 5. Close browser
    
 ### Source code
-[source code of etsy](https://github.com/automation9417/etsy)
+[source code of scrape image from etsy](https://github.com/automation9417/etsy)
 
+Another examples show how scrape image from bornshoes and redbubble.
+
+[source code of scrape image from bornshoes](https://github.com/automation9417/bornshoes)
+
+[source code of scrape image from redbubble](https://github.com/automation9417/redbubble)
 ### How to run on my computer
 Install and config by 'Installation Steps', download the source code from github, then open the etsy folder with vscode, and press F5 to run sample.py. The locate information used in the program is stored in ./locator/etsy.cnstore file, the program needs to get the locate information of the control from the file when running, so it needs to be included in the project.
 
